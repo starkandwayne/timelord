@@ -11,8 +11,7 @@ GEM
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.7.0)
-    puma (2.11.3)
-      rack (>= 1.1, < 2.0)
+    puma (2.14.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -31,8 +30,11 @@ PLATFORMS
 DEPENDENCIES
   activesupport
   chronic
-  puma
+  puma (= 2.14.0)
   sinatra
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.10.5
+   1.12.5
