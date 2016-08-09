@@ -26,7 +26,9 @@ TRIGGER_MAP = {
   'US/Central' => %w(CDT CST CENTRAL C #C),
   'US/Eastern' => %w(EDT EST EASTERN E #E),
   'Europe/London' => %w(BST B #B L LONDON),
-  'Europe/Madrid' => %w(CEST CE #CE)
+  'Europe/Madrid' => %w(CEST CE #CE),
+  'Asia/Kolkata' => %w(IST #I),
+  'Australia/Sydney' => %w(S SA #S)
 }
 
 def do_times(phrase)
@@ -49,6 +51,7 @@ def do_times(phrase)
     Time.zone = zone
     Chronic.time_class = Time.zone
     time = Chronic.parse(phrase)
+    time = Time.now unless time
     if time
       puts "Parsed: #{phrase} -> #{time.strftime('%I:%M%P')} #{time.zone}"
       times = []
