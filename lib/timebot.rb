@@ -27,8 +27,8 @@ TRIGGER_MAP = {
   'US/Eastern' => %w(EDT EST EASTERN E #E),
   'Europe/London' => %w(BST B #B L LONDON),
   'Europe/Madrid' => %w(CEST CE #CE),
-  'Asia/Kolkata' => %w(IST #I),
-  'Australia/Sydney' => %w(S SA #S #A)
+  'Asia/Kolkata' => %w(IST I #I),
+  'Australia/Sydney' => %w(S SA S A #S #A)
 }
 
 def do_times(phrase)
